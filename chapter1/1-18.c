@@ -8,10 +8,9 @@ int getline1(char s[], int lim)
         int c, i;
 
         for (i=0; i<lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
-                if (c!='\t' && s[i-1]==' ' && c==' ')
+                if (c!='\t' && s[i-1]!=' ' && c!=' ')
 			s[i] = c;
-		else
-			--i;
+		else if (
         if (c == '\n') {
                 s[i] = c;
                 ++i;
